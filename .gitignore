@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+venv/
+.venv/
+
+# Testing & Coverage
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ADJ Runtime
+logs/
+*.session_state.json
+.checkpoint_*.json
+.session_archive_*.json
+
+# Secrets (never commit)
+.env
+.env.*
+!.env.example
+buvmkey.txt
+**/buvmkey.txt
+*.key
+secrets/
+**/zenodo_token.txt
+
+# Local temp / key-probe scripts
+tmp_test_*.py
+
+# Internal-only docs (session memory, caveman ops, Claude handoffs)
+PROJECT_MEMORY.md
+GHOST/
+docs/ADJ_FUER_CLAUDE*.md
+docs/ADJ-ZUSAMMENFASSUNG_FUER_CLAUDE.md
+docs/FEVER_SUBSET_TEST_PLAN_CAVEMAN.md
+docs/EPI_HUMAN30_CAVEMAN.md
+docs/PAPER_EVIDENCE_MATRIX_CAVEMAN.md
+docs/VERGLEICH_ADJ_ALTERNATIVEN_CAVEMAN.md
+
+# Benchmark runtime (local absolute paths in logs/status)
+benchmarks/logs/
+
+# Type-check cache
+.mypy_cache/
+**/.mypy_cache/
+
+# Human eval — blind mapping geheim (nur lokal beim Auswerter)
+benchmarks/human_eval_pack/ANALYST_blind_mapping.json
+benchmarks/human_eval_pack/pack_manifest.json
+
+# Generated Zenodo bundle (optional local; attach to GitHub Release instead)
+docs/zenodo_release_v6.1/
+docs/zenodo_release_v6.1.zip
+
+# Public staging for docs-only GitHub push
+.public_staging/
+
+# Internal session / debug (local only)
+SESSION_HANDOFF.md
+NEW_SESSION_PROMPT.md
+debug_m1.py
+docs/v6.0-graphify-test-viz.md
+docs/heimdall_import_security.md
+docs/ADJ_SYSTEM_OVERVIEW.md
+llm_crosscheck_results.json
+.session_state.json
+.last_test_output.txt
+
+# OS
+Thumbs.db
+.DS_Store
+*.lnk
+
+# Graphify generated cache (regenerate locally)
+**/graphify-out/cache/
+
+# Internal benchmark caveman reports (public: comparison_report.md + json)
+benchmarks/results/**/*CAVEMAN*
+benchmarks/results/epi_epi-live487_test123/
+
+# Old preprint PDFs (v6.1 is canonical)
+docs/ADJ_System_v5.9f_Preprint.pdf
+docs/ADJ_System_v6.0_Preprint.pdf
+
+# Presentations — local only until final (not public)
+docs/*.pptx
+docs/ADJ_Vortrag*.pptx

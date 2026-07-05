@@ -1,0 +1,62 @@
+{
+  "cases": 487,
+  "seed": 42,
+  "results": {
+    "6": {
+      "step": 6,
+      "n": 487,
+      "ece": 0.4349,
+      "brier": 0.2565,
+      "accuracy": 0.9651,
+      "mean_c_new": 0.5302,
+      "reliability_bins": [
+        {"lo": 0.3, "hi": 0.4, "n": 205, "conf": 0.3, "acc": 0.9268, "gap": 0.6268},
+        {"lo": 0.6, "hi": 0.7, "n": 173, "conf": 0.6, "acc": 0.9884, "gap": 0.3884},
+        {"lo": 0.8, "hi": 0.9, "n": 109, "conf": 0.8522, "acc": 1.0, "gap": 0.1478}
+      ],
+      "per_status": {
+        "LI": {"n": 159, "ece": 0.5868, "brier": 0.3655, "accuracy": 1.0, "mean_c_new": 0.5868},
+        "PL": {"n": 173, "ece": 0.4613, "brier": 0.3031, "accuracy": 0.9017, "mean_c_new": 0.4613},
+        "VC": {"n": 109, "ece": 0.1478, "brier": 0.0218, "accuracy": 1.0, "mean_c_new": 0.8522},
+        "IU": {"n": 46, "ece": 0.4913, "brier": 0.2604, "accuracy": 1.0, "mean_c_new": 0.4913}
+      }
+    },
+    "7": {
+      "step": 7,
+      "n": 487,
+      "baseline_accuracy": 0.9651,
+      "adversarial": {"n": 487, "accuracy": 0.9651},
+      "noise": {"n": 487, "accuracy": 0.9651},
+      "short_lt10w": {"n": 57, "accuracy": 0.807},
+      "long_gt50w": {"n": 0, "accuracy": 0.0},
+      "german_heuristic": {"n": 78, "accuracy": 0.8462},
+      "english_heuristic": {"n": 409, "accuracy": 0.9878}
+    },
+    "8": {
+      "step": 8,
+      "n": 50,
+      "deterministic": true,
+      "run_mismatches": 0,
+      "order_independent": true,
+      "order_mismatches": 0,
+      "mismatch_samples": []
+    },
+    "9": {
+      "step": 9,
+      "n": 100,
+      "runtime_ms": {
+        "mean": 1018.86,
+        "median": 811.16,
+        "p95": 2207.74,
+        "p99": 2760.14,
+        "max": 2760.14
+      },
+      "memory_kb": {"mean": 354.4, "max": 472.1},
+      "scaling": [
+        {"cases": 10, "total_s": 6.72, "mean_ms_per_case": 672.01},
+        {"cases": 100, "total_s": 79.75, "mean_ms_per_case": 797.51},
+        {"cases": 487, "total_s": 382.86, "mean_ms_per_case": 786.17}
+      ]
+    }
+  }
+}

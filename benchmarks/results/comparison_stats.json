@@ -1,0 +1,725 @@
+{
+  "generated_at": "2026-07-05T05:49:35.009652+00:00",
+  "corpus": "adj_expanded_v3",
+  "case_count": 487,
+  "systems": {
+    "adj": {
+      "multiclass": {
+        "correct": 487,
+        "total": 487,
+        "accuracy": 1.0
+      },
+      "binary_error": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "tp": 205,
+        "fp": 0,
+        "fn": 0,
+        "tn": 282,
+        "n": 487
+      },
+      "binary_skip": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0,
+        "f1": 1.0,
+        "tp": 159,
+        "fp": 0,
+        "fn": 0,
+        "tn": 282,
+        "n": 441
+      },
+      "mean_runtime_ms": 511.08,
+      "mode": "local"
+    },
+    "popper": {
+      "multiclass": {
+        "correct": 168,
+        "total": 487,
+        "accuracy": 0.345
+      },
+      "binary_error": {
+        "precision": 0.6623,
+        "recall": 0.2488,
+        "accuracy": 0.6304,
+        "f1": 0.3617,
+        "tp": 51,
+        "fp": 26,
+        "fn": 154,
+        "tn": 256,
+        "n": 487
+      },
+      "binary_skip": {
+        "precision": 0.6923,
+        "recall": 0.1406,
+        "accuracy": 0.699,
+        "f1": 0.2338,
+        "tp": 18,
+        "fp": 8,
+        "fn": 110,
+        "tn": 256,
+        "n": 392
+      },
+      "mean_runtime_ms": null,
+      "mode": "local"
+    },
+    "selfcheckgpt": {
+      "multiclass": {
+        "correct": 76,
+        "total": 487,
+        "accuracy": 0.1561
+      },
+      "binary_error": {
+        "precision": 0.4298,
+        "recall": 0.9415,
+        "accuracy": 0.4497,
+        "f1": 0.5902,
+        "tp": 193,
+        "fp": 256,
+        "fn": 12,
+        "tn": 26,
+        "n": 487
+      },
+      "binary_skip": {
+        "precision": 0.7083,
+        "recall": 0.8947,
+        "accuracy": 0.8269,
+        "f1": 0.7907,
+        "tp": 17,
+        "fp": 7,
+        "fn": 2,
+        "tn": 26,
+        "n": 52
+      },
+      "mean_runtime_ms": null,
+      "mode": "heuristic"
+    },
+    "llm_judge": {
+      "multiclass": {
+        "correct": 293,
+        "total": 487,
+        "accuracy": 0.6016
+      },
+      "binary_error": {
+        "precision": 0.8368,
+        "recall": 0.9756,
+        "accuracy": 0.9097,
+        "f1": 0.9009,
+        "tp": 200,
+        "fp": 39,
+        "fn": 5,
+        "tn": 243,
+        "n": 487
+      },
+      "binary_skip": {
+        "precision": 0.8889,
+        "recall": 0.6154,
+        "accuracy": 0.9767,
+        "f1": 0.7273,
+        "tp": 8,
+        "fp": 1,
+        "fn": 5,
+        "tn": 243,
+        "n": 257
+      },
+      "mean_runtime_ms": null,
+      "mode": "heuristic"
+    }
+  },
+  "confusion": {
+    "adj": {
+      "LIKELY_HALLUCINATION": {
+        "LIKELY_HALLUCINATION": 159,
+        "PLAUSIBLE_HYPOTHESIS": 0,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 0
+      },
+      "PLAUSIBLE_HYPOTHESIS": {
+        "LIKELY_HALLUCINATION": 0,
+        "PLAUSIBLE_HYPOTHESIS": 173,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 0
+      },
+      "VERIFIED_CANDIDATE": {
+        "LIKELY_HALLUCINATION": 0,
+        "PLAUSIBLE_HYPOTHESIS": 0,
+        "VERIFIED_CANDIDATE": 109,
+        "INDETERMINATE_UNSAFE": 0
+      },
+      "INDETERMINATE_UNSAFE": {
+        "LIKELY_HALLUCINATION": 0,
+        "PLAUSIBLE_HYPOTHESIS": 0,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 46
+      }
+    },
+    "popper": {
+      "LIKELY_HALLUCINATION": {
+        "LIKELY_HALLUCINATION": 18,
+        "PLAUSIBLE_HYPOTHESIS": 110,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 31
+      },
+      "PLAUSIBLE_HYPOTHESIS": {
+        "LIKELY_HALLUCINATION": 7,
+        "PLAUSIBLE_HYPOTHESIS": 150,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 16
+      },
+      "VERIFIED_CANDIDATE": {
+        "LIKELY_HALLUCINATION": 1,
+        "PLAUSIBLE_HYPOTHESIS": 106,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 2
+      },
+      "INDETERMINATE_UNSAFE": {
+        "LIKELY_HALLUCINATION": 2,
+        "PLAUSIBLE_HYPOTHESIS": 44,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 0
+      }
+    },
+    "selfcheckgpt": {
+      "LIKELY_HALLUCINATION": {
+        "LIKELY_HALLUCINATION": 17,
+        "PLAUSIBLE_HYPOTHESIS": 2,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 140
+      },
+      "PLAUSIBLE_HYPOTHESIS": {
+        "LIKELY_HALLUCINATION": 5,
+        "PLAUSIBLE_HYPOTHESIS": 25,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 143
+      },
+      "VERIFIED_CANDIDATE": {
+        "LIKELY_HALLUCINATION": 2,
+        "PLAUSIBLE_HYPOTHESIS": 1,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 106
+      },
+      "INDETERMINATE_UNSAFE": {
+        "LIKELY_HALLUCINATION": 2,
+        "PLAUSIBLE_HYPOTHESIS": 10,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 34
+      }
+    },
+    "llm_judge": {
+      "LIKELY_HALLUCINATION": {
+        "LIKELY_HALLUCINATION": 8,
+        "PLAUSIBLE_HYPOTHESIS": 5,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 146
+      },
+      "PLAUSIBLE_HYPOTHESIS": {
+        "LIKELY_HALLUCINATION": 0,
+        "PLAUSIBLE_HYPOTHESIS": 139,
+        "VERIFIED_CANDIDATE": 1,
+        "INDETERMINATE_UNSAFE": 33
+      },
+      "VERIFIED_CANDIDATE": {
+        "LIKELY_HALLUCINATION": 1,
+        "PLAUSIBLE_HYPOTHESIS": 0,
+        "VERIFIED_CANDIDATE": 103,
+        "INDETERMINATE_UNSAFE": 5
+      },
+      "INDETERMINATE_UNSAFE": {
+        "LIKELY_HALLUCINATION": 3,
+        "PLAUSIBLE_HYPOTHESIS": 0,
+        "VERIFIED_CANDIDATE": 0,
+        "INDETERMINATE_UNSAFE": 43
+      }
+    }
+  },
+  "mcnemar": {
+    "popper": {
+      "b_only_a_correct": 319,
+      "c_only_b_correct": 0,
+      "chi2": 317.0031,
+      "p_approx": 0.0,
+      "significant_005": true
+    },
+    "selfcheckgpt": {
+      "b_only_a_correct": 411,
+      "c_only_b_correct": 0,
+      "chi2": 409.0024,
+      "p_approx": 0.0,
+      "significant_005": true
+    },
+    "llm_judge": {
+      "b_only_a_correct": 194,
+      "c_only_b_correct": 0,
+      "chi2": 192.0052,
+      "p_approx": 0.0,
+      "significant_005": true
+    }
+  },
+  "kappa": {
+    "popper": {
+      "kappa": 0.0262,
+      "agreement": 0.345,
+      "n": 487
+    },
+    "selfcheckgpt": {
+      "kappa": 0.0331,
+      "agreement": 0.1561,
+      "n": 487
+    },
+    "llm_judge": {
+      "kappa": 0.499,
+      "agreement": 0.6016,
+      "n": 487
+    }
+  },
+  "top_fails": {
+    "adj": {
+      "count": 0,
+      "by_domain": {},
+      "samples": []
+    },
+    "popper": {
+      "count": 319,
+      "by_domain": {
+        "physics": 24,
+        "history": 21,
+        "climate": 19,
+        "mathematics": 19,
+        "medicine": 18,
+        "cognitive_science": 18,
+        "computer_science": 17,
+        "psychology": 17,
+        "linguistics": 16,
+        "chemistry": 16
+      },
+      "samples": [
+        {
+          "id": "M1",
+          "domain": "medicine",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "M2",
+          "domain": "medicine",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "M4",
+          "domain": "medicine",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "BIO1",
+          "domain": "biology",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "LIKELY_HALLUCINATION",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "BIO2",
+          "domain": "biology",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "BIO3",
+          "domain": "biology",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "BIO4",
+          "domain": "biology",
+          "ideal": "VERIFIED_CANDIDATE",
+          "verdict": "PLAUSIBLE_HYPOTHESIS",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "PHY1",
+          "domain": "physics",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "PHY2",
+          "domain": "physics",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "PHY3",
+          "domain": "physics",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "PHY4",
+          "domain": "physics",
+          "ideal": "VERIFIED_CANDIDATE",
+          "verdict": "PLAUSIBLE_HYPOTHESIS",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "CS4",
+          "domain": "computer_science",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "COG1",
+          "domain": "cognitive_science",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "COG2",
+          "domain": "cognitive_science",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0
+        },
+        {
+          "id": "COG3",
+          "domain": "cognitive_science",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "LIKELY_HALLUCINATION",
+          "correct": false,
+          "runtime_ms": 0
+        }
+      ]
+    },
+    "selfcheckgpt": {
+      "count": 411,
+      "by_domain": {
+        "physics": 29,
+        "medicine": 24,
+        "linguistics": 24,
+        "history": 24,
+        "psychology": 23,
+        "computer_science": 22,
+        "cognitive_science": 22,
+        "climate": 22,
+        "mathematics": 22,
+        "biology": 21
+      },
+      "samples": [
+        {
+          "id": "M1",
+          "domain": "medicine",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "M2",
+          "domain": "medicine",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "M3",
+          "domain": "medicine",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "M4",
+          "domain": "medicine",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "BIO1",
+          "domain": "biology",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "LIKELY_HALLUCINATION",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "BIO2",
+          "domain": "biology",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "BIO3",
+          "domain": "biology",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "BIO4",
+          "domain": "biology",
+          "ideal": "VERIFIED_CANDIDATE",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "PHY1",
+          "domain": "physics",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "PHY2",
+          "domain": "physics",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "PHY3",
+          "domain": "physics",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "PHY4",
+          "domain": "physics",
+          "ideal": "VERIFIED_CANDIDATE",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "CS1",
+          "domain": "computer_science",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "CS2",
+          "domain": "computer_science",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "CS4",
+          "domain": "computer_science",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        }
+      ]
+    },
+    "llm_judge": {
+      "count": 194,
+      "by_domain": {
+        "physics": 18,
+        "medicine": 16,
+        "mathematics": 15,
+        "computer_science": 14,
+        "history": 13,
+        "climate": 12,
+        "sociology": 11,
+        "linguistics": 10,
+        "cognitive_science": 9,
+        "chemistry": 9
+      },
+      "samples": [
+        {
+          "id": "M1",
+          "domain": "medicine",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "M2",
+          "domain": "medicine",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "M3",
+          "domain": "medicine",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "M4",
+          "domain": "medicine",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "BIO1",
+          "domain": "biology",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "BIO2",
+          "domain": "biology",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "BIO3",
+          "domain": "biology",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "PHY1",
+          "domain": "physics",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "PHY2",
+          "domain": "physics",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "PHY3",
+          "domain": "physics",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "CS2",
+          "domain": "computer_science",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "CS3",
+          "domain": "computer_science",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "CS4",
+          "domain": "computer_science",
+          "ideal": "PLAUSIBLE_HYPOTHESIS",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "COG1",
+          "domain": "cognitive_science",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        },
+        {
+          "id": "COG2",
+          "domain": "cognitive_science",
+          "ideal": "LIKELY_HALLUCINATION",
+          "verdict": "INDETERMINATE_UNSAFE",
+          "correct": false,
+          "runtime_ms": 0,
+          "mode": "heuristic"
+        }
+      ]
+    }
+  }
+}

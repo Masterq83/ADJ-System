@@ -1,0 +1,28 @@
+# ADJ-System — LLM Access Guide
+
+> Public implementation and preprint for ADJ (Advocatus Diaboli Judgment).
+> Epistemic falsification for AI-generated deviations ("Lücke Z").
+> Funk!Werk Ai Solutions, 2026
+
+## Core documents (read first)
+/docs/ZENODO_PUBLIKATION.md
+/docs/BENCHMARK_SUITE_PAPER.md
+/benchmarks/results/comparison_report.md
+/README.md
+
+## Zenodo (canonical preprint)
+https://doi.org/10.5281/zenodo.21205393
+
+## Related public METIS philosophy
+https://github.com/Masterq83/metis-philosophy
+
+## Key claim (engineering hypothesis)
+Lücke Z requires separated falsification (Advocatus Diaboli + Judgment + Archivar)
+with 4-class output (LH / PH / VC / IU) — not peer-reviewed; see limitations in preprint.
+
+## Human evaluation (EPI-HUMAN30)
+/benchmarks/human_eval_pack/ANLEITUNG_RATER_DE.md
+/benchmarks/human_eval_pack/rater_sheet.csv
+
+## Citation
+Funk, M. (2026). ADJ-System v6.1. Zenodo. https://doi.org/10.5281/zenodo.21205393

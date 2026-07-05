@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "updated": "2026-07-05",
+  "purpose": "Paper-grade epistemic benchmarks for ADJ (4-class, Gap Z, vs baselines)",
+  "gold_label": "ideal_adj",
+  "labels": [
+    "LIKELY_HALLUCINATION",
+    "PLAUSIBLE_HYPOTHESIS",
+    "VERIFIED_CANDIDATE",
+    "INDETERMINATE_UNSAFE"
+  ],
+  "benchmarks": [
+    {
+      "id": "EPI-487",
+      "name": "Full Internal Corpus",
+      "corpus": "adj_expanded_v3.py",
+      "n": 487,
+      "paper_role": "Primary evidence — 4-class accuracy, McNemar vs baselines",
+      "paper_section": "9.1",
+      "literature_contrast": ["SelfCheckGPT (Manakul 2023)", "LLM-as-Judge (Zheng 2023)", "Popper falsification"],
+      "runnable": "comparison_report.py",
+      "status": "completed"
+    },
+    {
+      "id": "EPI-H120",
+      "name": "Stratified Holdout",
+      "corpus": "epi_holdout_h120.json",
+      "n": 120,
+      "split_seed": 20260705,
+      "n_per_class": 30,
+      "paper_role": "Generalization — fixed holdout, not used for pipeline tuning",
+      "paper_section": "9.2",
+      "literature_contrast": ["Internal validation best practice (ML holdout)"],
+      "runnable": "epi_benchmark_eval.py --benchmark EPI-H120",
+      "status": "prepared"
+    },
+    {
+      "id": "EPI-Z100",
+      "name": "Gap-Z Discrimination",
+      "corpus": "epi_gap_z_z100.json",
+      "n": 100,
+      "composition": "50 PH + 25 LH + 25 VC",
+      "split_seed": 20260705,
+      "paper_role": "Core USP — distinguish plausible hypothesis from error/verified",
+      "paper_section": "9.3",
+      "literature_contrast": ["No standard benchmark for Gap Z — novel contribution"],
+      "runnable": "epi_benchmark_eval.py --benchmark EPI-Z100",
+      "status": "prepared"
+    },
+    {
+      "id": "EPI-LIVE487",
+      "name": "Live Baselines Full Corpus",
+      "corpus": "adj_expanded_v3.py",
+      "n": 487,
+      "systems": ["adj", "popper", "llm_heuristic", "llm_live", "selfcheck_live"],
+      "paper_role": "Fair comparison with live NVIDIA API baselines (same 4-class task)",
+      "paper_section": "9.4",
+      "literature_contrast": ["SelfCheckGPT live", "LLM-Judge live (Llama 3.1 8B)"],
+      "runnable": "epi_benchmark_eval.py --benchmark EPI-487 --live",
+      "status": "prepared"
+    },
+    {
+      "id": "TRANSFER-FEVER500",
+      "name": "FEVER Transfer (out-of-domain)",
+      "corpus": "fever paper_dev subset",
+      "n": 500,
+      "paper_role": "Transfer limits — abstention, false-commit safety, task mismatch",
+      "paper_section": "9.5",
+      "literature_contrast": ["FEVER (Thorne 2018)", "AVeriTeC/InFact (2024)"],
+      "runnable": "Run-FeverPhase2.ps1",
+      "status": "completed",
+      "result_path": "benchmarks/results/fever_medium_20260705T075920Z"
+    },
+    {
+      "id": "EPI-HUMAN30",
+      "name": "Human Expert Evaluation",
+      "corpus": "epi_human_sample_h30.json",
+      "n": 30,
+      "paper_role": "External validity — blind expert rating ADJ vs baselines",
+      "paper_section": "9.6",
+      "literature_contrast": ["Human eval standard in NLP benchmarks"],
+      "runnable": "manual — see benchmarks/protocols/HUMAN_EVAL_PROTOCOL.md",
+      "status": "protocol_prepared"
+    }
+  ],
+  "metrics": {
+    "primary": [
+      "multiclass_accuracy_4",
+      "macro_f1_4",
+      "ph_recall",
+      "lh_ph_confusion_rate",
+      "mcnemar_p"
+    ],
+    "secondary": [
+      "binary_f1_hallucination",
+      "abstention_rate",
+      "false_commit_rate",
+      "cohens_kappa",
+      "bootstrap_ci_f1"
+    ],
+    "transfer": [
+      "fever_3_acc",
+      "false_supports",
+      "false_refutes"
+    ]
+  },
+  "requirements": {
+    "software": ["Python 3.11+", "adj-prototype"],
+    "optional_api": {
+      "env": "NVIDIA_API_KEY",
+      "used_by": ["EPI-LIVE487"],
+      "note": "Set environment variable; no key file path in public artefacts"
+    },
+    "human_eval": {
+      "raters_min": 2,
+      "cases": 30,
+      "protocol": "benchmarks/protocols/HUMAN_EVAL_PROTOCOL.md"
+    }
+  }
+}
